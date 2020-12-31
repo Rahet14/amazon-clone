@@ -6,10 +6,11 @@ import Login from "./Login";
 import "../styles/App.css";
 import { auth } from "../Firebase";
 import { useStateValue } from "../StateProvider";
+import Checkout from "./Checkout";
 
 function App() {
   const [state, dispatch] = useStateValue();
-  
+
   useEffect(() => {
     // will only run once when the app component loads...
 
@@ -38,6 +39,10 @@ function App() {
         <Switch>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/checkout">
+            <Header />
+            <Checkout />
           </Route>
           <Route path="/">
             <Header />
